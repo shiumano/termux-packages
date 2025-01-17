@@ -1,0 +1,12 @@
+diff -uNr a/configure b/configure
+--- a/configure
++++ b/configure
+@@ -21233,7 +21233,7 @@
+ ac_fn_c_check_func "$LINENO" "getrandom" "ac_cv_func_getrandom"
+ if test "x$ac_cv_func_getrandom" = xyes
+ then :
+-  printf "%s\n" "#define HAVE_GETRANDOM 1" >>confdefs.h
++  true  # clang told me that I can't use it after C99. Sorry, I couldn't figure out how to disable it...
+ 
+ fi
+ ac_fn_c_check_func "$LINENO" "kqueue" "ac_cv_func_kqueue"
